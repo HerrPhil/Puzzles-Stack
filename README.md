@@ -31,3 +31,17 @@ When you pop an element, then you remove a node.
 ## Inefficient Stack
 
 Try the array-based solution.
+
+As expected, the array-based solution is inefficient and has trade-offs.
+
+Every time the next push exceeds the current stack capacity,
+the solution needs to temporarily create a new stack array
+that is incrementally increased by the stack capacity constant.
+
+The stack capacity constant is a trade-off as well.
+Too small, and the stack is re-sized often.
+Too big, and the stack holds too much space in memory that might not be used.
+
+## Efficient Stack
+
+This stack will use a singly linked list to add and remove nodes as needed.
