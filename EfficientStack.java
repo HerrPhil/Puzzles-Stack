@@ -10,7 +10,7 @@ public class EfficientStack<T> {
             return;
         }
 
-        EfficientStack<String> stack = new EfficientStack<String>();
+        EfficientStack<String> stack = new EfficientStack<>();
 
         // initial state
         stack.emptinessMessage(stack.isEmpty());
@@ -52,10 +52,10 @@ public class EfficientStack<T> {
 
     }
 
-    private Node<T> nodeLinkedList;
+    private SinglyLinkedList<T> singlyLinkedList;
 
     public EfficientStack() {
-        this.nodeLinkedList = Node.initialize();
+        this.singlyLinkedList = new SinglyLinkedList<>();
     }
 
     private void emptinessMessage(boolean isStackEmpty) {
@@ -73,24 +73,25 @@ public class EfficientStack<T> {
     }
 
     public boolean isEmpty() {
-        return nodeLinkedList.isEmpty();
+        return singlyLinkedList.isEmpty();
     }
 
     public void push(T value) {
         System.out.printf("%n%n");
-        System.out.printf("push a value %s on the top of the stack%n", value.toString());
-        nodeLinkedList.add(value);
+        System.out.printf("push the value %s on the top of the stack%n", value.toString());
+        singlyLinkedList.add(value);
     }
 
     public T peek() {
         System.out.printf("%n%n");
-        System.out.printf("peek a value on the top of the stack%n");
-        return nodeLinkedList.read();
+        System.out.printf("peek the value on the top of the stack%n");
+        return singlyLinkedList.read();
     }
 
     public T pop() {
-        System.out.printf("pop a value on the top of the stack%n");
-        return nodeLinkedList.remove();
+        System.out.printf("%n");
+        System.out.printf("pop the value on the top of the stack%n");
+        return singlyLinkedList.remove();
     }
 
 }
