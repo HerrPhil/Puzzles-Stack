@@ -11,7 +11,7 @@ public class InefficientStack<T> {
             return;
         }
 
-        InefficientStack<String> stack = new InefficientStack<String>(String.class);
+        InefficientStack<String> stack = new InefficientStack<>(String.class);
 
         // initial state
         stack.emptinessMessage(stack.isEmpty());
