@@ -45,3 +45,24 @@ Too big, and the stack holds too much space in memory that might not be used.
 ## Efficient Stack
 
 This stack will use a singly linked list to add and remove nodes as needed.
+
+The `EfficientStack` simply adds the nomenclature of a stack.
+
+The `EfficientStack` delegates to the `SinglyLinkedList` data structure
+to manage the stack logic.
+
+The `SinglyLinkedList` delegates the entries into the data structure to `Node`.
+
+The `Node` stores a value and a pointer to the previous node.
+
+Now the stack will only use as much memory as there are nodes in the list.
+
+## Build
+
+An alternative to build follows.
+
+```
+rm -v *.class
+find . -name "*.java" > sources.txt
+javac @sources.txt
+```
